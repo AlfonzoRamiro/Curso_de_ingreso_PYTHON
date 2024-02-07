@@ -6,7 +6,7 @@ import customtkinter
 
 '''
 nombre: Ramiro 
-apellido: Alfonzo Barrios
+apellido: Barrios Alfonzo
 ---
 Ejercicio: entrada_salida_06
 ---
