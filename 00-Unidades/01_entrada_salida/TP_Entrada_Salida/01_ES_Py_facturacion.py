@@ -17,7 +17,7 @@ Para el departamento de facturación:
 	C.	ingresar tres precios de productos sumarlos y mostrar el precio final (más IVA 21%).
 '''
 
-class App(customtkinter.CTk):
+class App(customtkinter.CTk): 
     
     def __init__(self):
         super().__init__()

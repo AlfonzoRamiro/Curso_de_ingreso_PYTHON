@@ -45,26 +45,26 @@ class App(customtkinter.CTk):
     def btn_calcular_on_click(self):
         marca = self.combobox_marca.get()
         cantidad = self.combobox_cantidad.get()
-        cantidad_int = int(cantidad)
+        cantidad = int(cantidad)
 
         precio_individual_lampara = 800
-        precio_por_cantidad_de_lampara = precio_individual_lampara * cantidad_int
+        precio_por_cantidad_de_lampara = precio_individual_lampara * cantidad
 
         valor_de_descuento = 0
         
-        if cantidad_int >= 6:
+        if cantidad >= 6:
             valor_de_descuento = 0.5
-        elif cantidad_int == 5:
+        elif cantidad == 5:
             if marca == "ArgentinaLuz":
                 valor_de_descuento = 0.4
             else:
                 valor_de_descuento = 0.3
-        elif cantidad_int == 4:
+        elif cantidad == 4:
             if marca == "ArgentinaLuz" or marca == "FelipeLamparas":
                 valor_de_descuento = 0.25
             else:
                 valor_de_descuento = 0.2
-        elif cantidad_int == 3:
+        elif cantidad == 3:
             if marca == "ArgentinaLuz":
                 valor_de_descuento = 0.15
             elif marca == "FelipeLamparas":
@@ -78,7 +78,7 @@ class App(customtkinter.CTk):
 
         precio_final = precio_por_cantidad_de_lampara * (1 - valor_de_descuento)
 
-        mensaje = f"Marca: {marca}, Cantidad: {cantidad_int}, Precio total sin descuento: {precio_por_cantidad_de_lampara}, Descuento aplicado: {valor_de_descuento * 100}% Precio final con descuento: {precio_final}"
+        mensaje = f"Marca: {marca}, Cantidad: {cantidad}, Precio total sin descuento: {precio_por_cantidad_de_lampara}, Descuento aplicado: {valor_de_descuento * 100}% Precio final con descuento: {precio_final}"
 
         alert("", mensaje)
 

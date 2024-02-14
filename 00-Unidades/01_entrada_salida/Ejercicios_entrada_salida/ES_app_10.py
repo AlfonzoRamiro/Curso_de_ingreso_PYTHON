@@ -35,8 +35,7 @@ class App(customtkinter.CTk):
 
     def btn_mostrar_on_click(self):
         importe = self.txt_importe.get()
-        importe = float(importe)
-        importe = importe * 0.80
+        importe = float(importe)  * 0.80
         alert("", f"Su importe es: {importe}")
         
 

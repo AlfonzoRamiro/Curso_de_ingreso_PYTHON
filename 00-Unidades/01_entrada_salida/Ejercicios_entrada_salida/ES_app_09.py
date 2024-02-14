@@ -34,7 +34,6 @@ class App(customtkinter.CTk):
 
     def btn_mostrar_on_click(self):
         sueldo = self.txt_sueldo.get()
-        precio_final = float(sueldo)
         precio_final = float(sueldo) * 1.15
         alert("", f"El precio final es: {precio_final}") 
         
