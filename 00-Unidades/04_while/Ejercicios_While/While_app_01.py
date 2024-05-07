@@ -35,9 +35,7 @@ class App(customtkinter.CTk):
             alert(contador_iteracion + 1)
             contador_iteracion += 1
 
-        alert("Hola")
-    
-    
+       
 if __name__ == "__main__":
     app = App()
     app.geometry("300x300")

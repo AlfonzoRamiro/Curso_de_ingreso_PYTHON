@@ -32,7 +32,7 @@ class App(customtkinter.CTk):
         contador_iteracion = 10
 
         while contador_iteracion > 0:
-            print(contador_iteracion)
+            alert(contador_iteracion)
             contador_iteracion -= 1 
         
     

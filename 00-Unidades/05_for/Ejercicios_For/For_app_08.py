@@ -26,8 +26,23 @@ class App(customtkinter.CTk):
 
 
     def btn_mostrar_on_click(self):
-        pass
-    
+        numero = int(prompt("numero",""))
+        cantidad_primos = 0  
+        
+        for i in range(2, numero+1):
+            es_primo = True
+            for j in range(2, i):
+                if i % j == 0:
+                    es_primo = False  
+            if es_primo:
+                cantidad_primos += 1
+                alert("", f"{i}")
+        
+        mensaje = f"Cantidad de primos {cantidad_primos}"
+        alert("",mensaje)
+                
+            
+        
 if __name__ == "__main__":
     app = App()
     app.geometry("300x300")
